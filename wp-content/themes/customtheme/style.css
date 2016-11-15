@@ -1,0 +1,44 @@
+/*
+    Theme Name: Custom Theme
+    Theme URI: https://wordpress.org
+    Author: HariSeldon
+    Author URI: https://wordpress.org/
+    Description: Custom Theme - part of theme developer course
+    Version: 1.0
+    License: GNU General Public License v2 or later
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    Tags: black
+    Text Domain: customtheme
+*/
+/* Custom background and text color for Bootstrap Jumbotron */
+.gradient-bg {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2ea7f2+35,207cca+100,7db9e8+100,207cca+100 */
+    background: #1e5799; /* Old browsers */
+    background: -moz-linear-gradient(left,  #1e5799 0%, #2ea7f2 35%, #207cca 100%, #7db9e8 100%, #207cca 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #1e5799 0%,#2ea7f2 35%,#207cca 100%,#7db9e8 100%,#207cca 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #1e5799 0%,#2ea7f2 35%,#207cca 100%,#7db9e8 100%,#207cca 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#207cca',GradientType=1 ); /* IE6-9 */
+    color: white;
+}
+.main-custom-nav {
+    border-radius: 0;
+}
+
+.margin-neg-20 {
+    margin-top: -20px;
+}
+
+.main-custom-nav a {
+    color: white;
+}
+
+.main-custom-nav .navbar-nav > li > a:hover,
+.main-custom-nav .navbar-nav > li > a:focus {
+    background-color: transparent;
+    color: #ff0000;
+}
+
+.main-custom-nav .icon-bar {
+    color: white;
+    background-color: white;
+}
