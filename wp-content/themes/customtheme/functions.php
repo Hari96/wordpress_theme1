@@ -1,10 +1,10 @@
 <?php
 
-
 //Loading in stylesheets/scripts
 function enqueue_customtheme_styles() {
     wp_enqueue_script( 'bootstrap-js', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery'));
     wp_enqueue_style('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+    wp_enqueue_style('googlefont', '//fonts.googleapis.com/css?family=Montserrat');
     wp_enqueue_style('customtheme-style', get_stylesheet_uri() );
 }
 add_action('wp_enqueue_scripts', 'enqueue_customtheme_styles');
@@ -31,5 +31,14 @@ function customtheme_widgets() {
         ));
 }
 add_action( 'widgets_init', 'customtheme_widgets' );
+
+if ( !function_exists( 'custom_shortcode') ) :// Namespacing
+    function custom_shortcode( $atts, $content = null ) {
+        return '<div class="col-md-4">' . $content . '</div>';
+}
+endif;
+add_shortcode( 'one_third', 'custom_shortcode');
+
+//remove_filter( 'the_content', 'wpautop');//function to remove automatic paragraphs in admin editor
 
 ?>
